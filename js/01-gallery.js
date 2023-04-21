@@ -36,7 +36,6 @@ const onElementClick= ((event) => {
     instance.show();
 
     const handleClick = (event) => {
-      console.log("asdasd");
       if (event.code === "Escape") {
           instance.close();
           document.removeEventListener("keydown", handleClick);
