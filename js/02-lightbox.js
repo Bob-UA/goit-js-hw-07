@@ -15,25 +15,20 @@ function createGalleryCardsMarckup(elements) {
               class="gallery__image"
               src="${preview}"
               alt="${description}"
+              title="${description}"
+
             />
           </a>
         </li>`;
     })
     .join("");
 }
-
-const onElementClick = (e) => {
-    e.preventDefault();
-    let gallery = new SimpleLightbox(".gallery a");
-    gallery.on("show.simplelightbox", function () {
-    });
-
-    gallery.on("error.simplelightbox", function (e) {
+    let gal = new SimpleLightbox(".gallery a");
+gal.on("show.simplelightbox", function () {
+    
+});
+    gal.on("error.simplelightbox", function (e) {
       console.log(e);
     });
-};
-
-gallery.addEventListener("click", onElementClick);
-
 
 
